@@ -1,0 +1,23 @@
+paleta1
+.color1 { #f6eddc };
+.color2 { #e3e5d7 };
+.color3 { #bdd6d2 };
+.color4 { #a5c8ca };
+.color5 { #586875 };
+
+
+
+
+
+
+
+
+
+
+
+paleta nuvens
+.color1 { #5188ad };
+.color2 { #b4ccdc };
+.color3 { #2a475a };
+.color4 { #a4b4bc };
+.color5 { #afc4d4 };
