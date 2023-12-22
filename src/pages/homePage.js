@@ -270,10 +270,6 @@ function HomePage() {
 
       <section id="inicio" className="backgroundImage">
         <ReactBootstrap.Container>
-          <ModalFormContato
-            show={modalFormContato}
-            onHide={() => setModalFormContato(false)}
-          />
           <ReactBootstrap.Row className="linha animeLinhaInicio">
             <ReactBootstrap.Col className="colunaTexto">
               <h3>Olá, eu sou Luiz Henrique ...</h3>
@@ -417,8 +413,9 @@ function HomePage() {
 
       <section id="sobre">
         <div className="sobre">
-          <ReactBootstrap.Container>
+          
             <div className="conteudoSobre">
+            <ReactBootstrap.Container>
               <h3>Minha história</h3>
               <ReactBootstrap.Row className="linhaSobre animeSobre">
                 <ReactBootstrap.Col>
@@ -444,8 +441,9 @@ function HomePage() {
                   </p>
                 </ReactBootstrap.Col>
               </ReactBootstrap.Row>
+              </ReactBootstrap.Container>
             </div>
-          </ReactBootstrap.Container>
+          
         </div>
       </section>
 

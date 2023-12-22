@@ -46,7 +46,6 @@
     background-attachment: fixed;
 }
 .linha{
-    padding-top: 5em;
     padding-bottom: 3%;
 }
 .colunaTexto{
@@ -54,7 +53,7 @@
     
 }
 .colunaFoto{
-    text-align: end !important;
+    text-align: center !important;
 }
 .colunaTexto h3{
     font-family: 'M PLUS Code Latin', sans-serif;
@@ -97,7 +96,6 @@
 .sobre{
     background-color: #DDE5E7;
     padding-top: 7%;
-    padding-bottom: 3em;
 }
 .projetosContainer{
     justify-content: center !important;
