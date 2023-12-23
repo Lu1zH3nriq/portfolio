@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootstrap from "react-bootstrap";
 import "../styles/App.css";
-import logoLuiz from "../img/logoLuiz.png";
-import foto from "../img/foto1.png";
+import logoLuiz from "../img/H.png";
 import fotoGrande from "../img/foto maior.jpg";
+import whatsapp from "../img/whatsapp3.webP";
+
 import {
   FaInstagramSquare,
   FaLinkedin,
@@ -19,10 +20,15 @@ import desDesktop from "../img/desDesktop.jpg";
 import desWeb from "../img/desWeb.jpg";
 import desMobile from "../img/desMobile.jpg";
 
-import LappImage1 from "../img/print 1.png";
-import LappImage2 from "../img/print 4.png";
 
 function HomePage() {
+  const [modalContact, setModalContact] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [message, setMessage] = useState("");
+
   useEffect(() => {
     const animacaoInicio = ScrollReveal({
       origin: "bottom",
@@ -51,185 +57,9 @@ function HomePage() {
     animacaoSobre.reveal(".animeSobre");
   }, []);
 
-  function ModalFormContato(props) {
-    return (
-      <ReactBootstrap.Modal
-        className="modal1"
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <ReactBootstrap.Modal.Header>
-          <ReactBootstrap.Modal.Title id="contained-modal-title-vcenter" className="titleContato">
-            Contato
-          </ReactBootstrap.Modal.Title>
-        </ReactBootstrap.Modal.Header>
-        <ReactBootstrap.Modal.Body>
-          <ReactBootstrap.Row className="edit">
-            <ReactBootstrap.Col xs={12} md={4} className="colunaIcons">
-              <h4>Redes Sociais</h4>
-              <ul className="listaLinksForm">
-                <li>
-                  <a
-                    href="https://www.instagram.com/luiz.rodri_/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaInstagramSquare /> Instagram{" "}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/5534998713749?text=Ol%C3%A1%2C+tudo+bem%3F+Vi+seu+portf%C3%B3lio+e+gostei+dos+seus+projetos%2C+podemos+conversar+mais+a+respeito.++"
-                    target="blank"
-                  >
-                    <FaWhatsappSquare /> Whatsapp{" "}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/luiz-henrique-mendes-23395a217/"
-                    target="blank"
-                  >
-                    <FaLinkedin /> Linkedin
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Lu1zH3nriq" target="blank">
-                    <FaGithub /> GitHub{" "}
-                  </a>
-                </li>
-              </ul>
-            </ReactBootstrap.Col>
-            <ReactBootstrap.Col xs={12} md={8}>
-              <h4>Se preferir me mande um email </h4>
-              <ReactBootstrap.Form>
-                <ReactBootstrap.Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <ReactBootstrap.Form.Label>
-                    Digite seu e-mail
-                  </ReactBootstrap.Form.Label>
-                  <ReactBootstrap.Form.Control
-                    type="email"
-                    placeholder="name@example.com"
-                  />
-                </ReactBootstrap.Form.Group>
-                <ReactBootstrap.Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <ReactBootstrap.Form.Label>
-                    Sua mensagem aqui:
-                  </ReactBootstrap.Form.Label>
-                  <ReactBootstrap.Form.Control as="textarea" rows={3} />
-                </ReactBootstrap.Form.Group>
-              </ReactBootstrap.Form>
-              <ReactBootstrap.Button>Enviar</ReactBootstrap.Button>
-            </ReactBootstrap.Col>
-          </ReactBootstrap.Row>
-        </ReactBootstrap.Modal.Body>
-        <ReactBootstrap.Modal.Footer>
-          <ReactBootstrap.Button onClick={() => setModalFormContato(false)}>
-            Fechar
-          </ReactBootstrap.Button>
-        </ReactBootstrap.Modal.Footer>
-      </ReactBootstrap.Modal>
-    );
-  }
-  function ModalDesktop(props) {
-    return (
-      <ReactBootstrap.Modal
-        className="modal1"
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <ReactBootstrap.Modal.Header>
-          <ReactBootstrap.Modal.Title id="contained-modal-title-vcenter">
-            L.APP - foods
-          </ReactBootstrap.Modal.Title>
-        </ReactBootstrap.Modal.Header>
-        <ReactBootstrap.Modal.Body>
-          <ReactBootstrap.Image
-            className="imgDesktop"
-            src={LappImage1}
-            alt="Funcionamento do Software"
-            title="Print do funcionamento do software"
-          />
-          <ReactBootstrap.Image
-            className="imgDesktop"
-            src={LappImage2}
-            alt="Funcionamento do Software"
-            title="Print do funcionamento do software"
-          />
-        </ReactBootstrap.Modal.Body>
-        <ReactBootstrap.Modal.Footer>
-          <ReactBootstrap.Button onClick={() => setModalDesktop(false)}>
-            Fechar
-          </ReactBootstrap.Button>
-        </ReactBootstrap.Modal.Footer>
-      </ReactBootstrap.Modal>
-    );
-  }
-  function ModalWeb(props) {
-    return (
-      <ReactBootstrap.Modal
-        className="modal1"
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <ReactBootstrap.Modal.Header>
-          <ReactBootstrap.Modal.Title id="contained-modal-title-vcenter">
-            Sites e Landing Pages
-          </ReactBootstrap.Modal.Title>
-        </ReactBootstrap.Modal.Header>
-        <ReactBootstrap.Modal.Body>
-          <h4>Imagens de sites e Landing Pages</h4>
-        </ReactBootstrap.Modal.Body>
-        <ReactBootstrap.Modal.Footer>
-          <ReactBootstrap.Button onClick={() => setModalWeb(false)}>
-            Fechar
-          </ReactBootstrap.Button>
-        </ReactBootstrap.Modal.Footer>
-      </ReactBootstrap.Modal>
-    );
-  }
-  function ModalMobile(props) {
-    return (
-      <ReactBootstrap.Modal
-        className="modal1"
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <ReactBootstrap.Modal.Header>
-          <ReactBootstrap.Modal.Title id="contained-modal-title-vcenter">
-            Aplicativos
-          </ReactBootstrap.Modal.Title>
-        </ReactBootstrap.Modal.Header>
-        <ReactBootstrap.Modal.Body>
-          <h4>Imagem de Aplicativos</h4>
-        </ReactBootstrap.Modal.Body>
-        <ReactBootstrap.Modal.Footer>
-          <ReactBootstrap.Button onClick={() => setModalMobile(false)}>
-            Fechar
-          </ReactBootstrap.Button>
-        </ReactBootstrap.Modal.Footer>
-      </ReactBootstrap.Modal>
-    );
-  }
-
-  const [modalFormContato, setModalFormContato] = React.useState(false);
-  const [modalDesktop, setModalDesktop] = React.useState(false);
-  const [modalWeb, setModalWeb] = React.useState(false);
-  const [modalMobile, setModalMobile] = React.useState(false);
+  const handleModalContact = () => {
+    setModalContact(!modalContact);
+  };
 
   return (
     <>
@@ -259,7 +89,13 @@ function HomePage() {
                 <ReactBootstrap.Nav.Link className="headerFont" href="#sobre">
                   Sobre
                 </ReactBootstrap.Nav.Link>
-                <ReactBootstrap.Nav.Link className="headerFont" href="#contato">
+                <ReactBootstrap.Nav.Link
+                  className="headerFont"
+                  href="#contato"
+                  onClick={() => {
+                    handleModalContact();
+                  }}
+                >
                   Contato
                 </ReactBootstrap.Nav.Link>
               </ReactBootstrap.Nav>
@@ -271,49 +107,13 @@ function HomePage() {
       <section id="inicio" className="backgroundImage">
         <ReactBootstrap.Container>
           <ReactBootstrap.Row className="linha animeLinhaInicio">
-            <ReactBootstrap.Col className="colunaTexto">
-              <h3>Olá, eu sou Luiz Henrique ...</h3>
-              <p>
-                Meu nome é Luiz Henrique, tenho 22 anos e sou um desenvolvedor
-                full stack de aplicações web e mobile. Desenvolvo sites, landing
-                pages e até aplicações mais completas tanto para web quanto para
-                mobile. Minhas habilidades são voltadas as tecnologias Java e
-                JavaScript, como também banco de dados SQL e NoSQL. Se você está
-                procurando um profissional capacitado e dedicado para ajudar no
-                seu projeto, eu posso ajudar! Veja alguns dos meus projetos e
-                entre em contato comigo para discutirmos mais sobre suas
-                necessidades.
-              </p>
-              <div className="btnSaibaMais">
-                <ReactBootstrap.Button
-                  variant="info"
-                  onClick={() => setModalFormContato(true)}
-                >
-                  Contate-me !
-                </ReactBootstrap.Button>
-              </div>
-            </ReactBootstrap.Col>
-
-            <ReactBootstrap.Col className="colunaFoto">
-              <ReactBootstrap.Image
-                className="fotoLuiz"
-                src={foto}
-                alt="Foto"
-                title="Foto"
-              />
-            </ReactBootstrap.Col>
+            
           </ReactBootstrap.Row>
         </ReactBootstrap.Container>
       </section>
 
       <section id="projetos" className="projetos">
         <ReactBootstrap.Container>
-          <ModalDesktop
-            show={modalDesktop}
-            onHide={(setModalDesktop) => false}
-          />
-          <ModalWeb show={modalWeb} onHide={(setModalWeb) => false} />
-          <ModalMobile show={modalMobile} onHide={(setModalMobile) => false} />
           <div className="projetosContainer">
             <h3>Projetos</h3>
             <ReactBootstrap.Row className="linhas animeLinha1">
@@ -330,10 +130,7 @@ function HomePage() {
                   relacional MySQL.
                 </p>
                 <div className="btnSaibaMais">
-                  <ReactBootstrap.Button
-                    variant="info"
-                    onClick={() => setModalDesktop(true)}
-                  >
+                  <ReactBootstrap.Button variant="info" onClick={() => {}}>
                     Mais detalhes
                   </ReactBootstrap.Button>
                 </div>
@@ -368,10 +165,7 @@ function HomePage() {
                   com armazenagem dos dados no banco de dados relacional MySQL.
                 </p>
                 <div className="btnSaibaMais">
-                  <ReactBootstrap.Button
-                    variant="info"
-                    onClick={() => setModalWeb(true)}
-                  >
+                  <ReactBootstrap.Button variant="info" onClick={() => {}}>
                     Mais detalhes
                   </ReactBootstrap.Button>
                 </div>
@@ -390,10 +184,7 @@ function HomePage() {
                   com armazenagem dos dados no banco de dados relacional MySQL.
                 </p>
                 <div className="btnSaibaMais">
-                  <ReactBootstrap.Button
-                    variant="info"
-                    onClick={() => setModalMobile(true)}
-                  >
+                  <ReactBootstrap.Button variant="info" onClick={() => {}}>
                     Mais detalhes
                   </ReactBootstrap.Button>
                 </div>
@@ -413,8 +204,7 @@ function HomePage() {
 
       <section id="sobre">
         <div className="sobre">
-          
-            <div className="conteudoSobre">
+          <div className="conteudoSobre">
             <ReactBootstrap.Container>
               <h3>Minha história</h3>
               <ReactBootstrap.Row className="linhaSobre animeSobre">
@@ -441,9 +231,8 @@ function HomePage() {
                   </p>
                 </ReactBootstrap.Col>
               </ReactBootstrap.Row>
-              </ReactBootstrap.Container>
-            </div>
-          
+            </ReactBootstrap.Container>
+          </div>
         </div>
       </section>
 
@@ -492,6 +281,103 @@ function HomePage() {
           </ReactBootstrap.Row>
         </ReactBootstrap.Container>
       </footer>
+
+      <a
+        href="https://wa.me/5534998713749?text=Ol%C3%A1%2C+tudo+bem%3F+Vi+seu+portf%C3%B3lio+e+gostei+dos+seus+projetos%2C+podemos+conversar+mais+a+respeito.++"
+        target="blank"
+      >
+        <img
+          className="fixedButton"
+          src={whatsapp}
+          alt="Whatsapp"
+          title="Whatsapp"
+        />
+      </a>
+
+      <ReactBootstrap.Modal
+        show={modalContact}
+        backdrop="static"
+        onHide={() => {
+          handleModalContact();
+        }}
+        size="lg"
+      >
+        <ReactBootstrap.Container>
+          <ReactBootstrap.Modal.Header closeButton>
+            Contato
+          </ReactBootstrap.Modal.Header>
+
+          <ReactBootstrap.Modal.Body>
+            <ReactBootstrap.Form onSubmit={() => {}}>
+              <ReactBootstrap.Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <ReactBootstrap.Form.Label>
+                  Digite seu nome:
+                </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Control
+                  type="text"
+                  placeholder="Seu nome"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
+              </ReactBootstrap.Form.Group>
+
+              <ReactBootstrap.Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <ReactBootstrap.Form.Label>
+                  Digite seu email:
+                </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Control
+                  type="email"
+                  placeholder="email@exemplo.com.br"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
+              </ReactBootstrap.Form.Group>
+
+              <ReactBootstrap.Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <ReactBootstrap.Form.Label>
+                  Informe o assunto:
+                </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Control
+                  type="text"
+                  placeholder="Qual o assunto"
+                  onChange={(e) => setAssunto(e.currentTarget.value)}
+                  value={assunto}
+                />
+              </ReactBootstrap.Form.Group>
+
+              <ReactBootstrap.Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <ReactBootstrap.Form.Label>
+                  Escreva sua mensagem:
+                </ReactBootstrap.Form.Label>
+                <ReactBootstrap.Form.Control
+                  as="textarea"
+                  rows={3}
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
+                />
+              </ReactBootstrap.Form.Group>
+
+              <div className="btnEnviar">
+                <input className="button" type="submit" value="Enviar" />
+              </div>
+            </ReactBootstrap.Form>
+          </ReactBootstrap.Modal.Body>
+
+          <ReactBootstrap.Modal.Footer></ReactBootstrap.Modal.Footer>
+        </ReactBootstrap.Container>
+      </ReactBootstrap.Modal>
     </>
   );
 }

@@ -1,243 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&display=swap&family=M+PLUS+Code+Latin:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&display=swap&family=M+PLUS+Code+Latin:wght@500&display=swap");
 
-.navbar-collapse{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.navbar-collapse {
+  justify-content: flex-start;
+  margin-left: 5%;
 }
-.navbar-collapse a:hover{
-    color: #afc4d4 ;
+.navbar-collapse a:hover {
+  color: #ffffff;
 }
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-    color: #afc4d4;
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: #ffffff;
 }
-.header{
-    position: fixed;
-    width: 100%;
-    background-color: #2a475a;
-    min-height: 10%;
-    z-index: 1000;
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #0D0D0B;
+  min-height: 10%;
+  z-index: 1000;
 }
-.footer{
-    background-color: #2a475a;
-    width: 100%;
-    z-index: 1000;
-    
+.footer {
+  background-color: #0D0D0B;
+  width: 100%;
+  z-index: 1000;
 }
-.headerAlign{
-    justify-content: right !important;
+.headerFont {
+  color: #ffffff;
+  font-family: "M PLUS Code Latin", sans-serif;
 }
-.headerFont{
-    color:  #ffffff ;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    margin-left: 10%;
+.logoLuiz {
+  height: 100px;
+  width: auto;
+  margin-left: 15%;
 }
-.logoLuiz{
-    height: 100px;
-    width: auto;
-    margin-left: 1%;
+.backgroundImage {
+  padding-top: 12%;
+  padding-bottom: 1%;
+  background-image: url("../img/bgDev.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.backgroundImage{
-    padding-top: 15%;
-    padding-bottom: 1%;
-    background-image: url("../img/fundoNuvens.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.linha {
+  padding-bottom: 3%;
+  min-height: 70vh;
 }
-.linha{
-    padding-bottom: 3%;
+.colunaTexto {
+  text-align: justify;
 }
-.colunaTexto{
-    text-align: justify;
-    
+.colunaFoto {
+  text-align: center !important;
 }
-.colunaFoto{
-    text-align: center !important;
+.colunaTexto h3 {
+  font-family: "M PLUS Code Latin", sans-serif;
+  font-size: 2em;
 }
-.colunaTexto h3{
-    font-family: 'M PLUS Code Latin', sans-serif;
-    font-size: 2em;
+.colunaTexto p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-size: 1.3em;
 }
-.colunaTexto p{
-    font-family:  Arial, Helvetica, sans-serif;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    font-size: 1.3em;
+.btnSaibaMais {
+  text-align: center;
+  padding: 0.5em;
 }
-.btnSaibaMais{
-    text-align: center;
-    padding: 0.5em;
+.btn-info {
+  background-color: #5188ad !important;
+  color: #ffffff;
+  border: #5188ad;
+  border-radius: 1em;
+  width: 15em;
+  height: 4em;
+  font-size: 1em;
 }
-.btn-info{
-    background-color: #5188ad  !important;
-    color: #ffffff ;
-    border: #5188ad ;
-    border-radius: 1em;
-    width: 15em;
-    height: 4em;
-    font-size: 1em;
+.btn-info:hover {
+  background-color: #2a475a !important;
+  color: #ffffff;
+  border: #2a475a;
+  transition-duration: 0.5s;
 }
-.btn-info:hover{
-    background-color: #2a475a  !important;
-    color: #ffffff ;
-    border: #2a475a ;
-    transition-duration: 0.5s;
+.fotoLuiz {
+  border-radius: 50%;
+  border: #5188ad;
+  border-style: solid;
+  border-width: 8px;
 }
-.fotoLuiz{
-    border-radius: 50%;
-    border: #5188AD;
-    border-style: solid;
-    border-width: 8px;
+.projetos,
+.contato {
+  background-color: #dde5e7;
 }
-.projetos, .contato{
-    background-color: #DDE5E7;
+.sobre {
+  background-color: #dde5e7;
+  padding-top: 7%;
 }
-.sobre{
-    background-color: #DDE5E7;
-    padding-top: 7%;
+.projetosContainer {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
 }
-.projetosContainer{
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center;
+.projetos h3 {
+  padding-top: 9%;
+  font-family: "M PLUS Code Latin", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  justify-content: center;
 }
-.projetos h3{
-    padding-top: 9%;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    font-size: 2.5em;
-    text-align: center;
-    justify-content: center;
-}
-.conteudoSobre h3{
-    padding-top: 4%;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    font-size: 2.5em;
-    text-align: center;
-    justify-content: center;
+.conteudoSobre h3 {
+  padding-top: 4%;
+  font-family: "M PLUS Code Latin", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  justify-content: center;
 }
 
-.linhas{
-    padding-top: 3%;
-    padding-bottom: 5%;
+.linhas {
+  padding-top: 3%;
+  padding-bottom: 5%;
 }
-.colunaTxt h2{
-    padding: 1%;
-    font-family: 'M PLUS Code Latin', sans-serif;
+.colunaTxt h2 {
+  padding: 1%;
+  font-family: "M PLUS Code Latin", sans-serif;
 }
-.colunaTxt h4{
-    padding: 1%;
-    
+.colunaTxt h4 {
+  padding: 1%;
 }
-.colunaTxt p{
-    font-family:  Arial, Helvetica, sans-serif;
-    padding-bottom: 1em;
-    font-size: 1.3em;
-    text-align: justify;
+.colunaTxt p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 1em;
+  font-size: 1.3em;
+  text-align: justify;
 }
-.modal1{
-    text-align: center;
+.modal1 {
+  text-align: center;
 }
-.imgDesktop{
-    padding: 1em;
-    border-radius: .5em;
-    height: 400px;
-    max-width: 100%;
+.imgDesktop {
+  padding: 1em;
+  border-radius: 0.5em;
+  height: 400px;
+  max-width: 100%;
 }
-.img{
-    border-radius: .5em;
-    height: 400px;
-    max-width: 100%;
+.img {
+  border-radius: 0.5em;
+  height: 400px;
+  max-width: 100%;
 }
 @media only screen and (max-width: 768px) {
-    .img, .imgDesktop {
-      height: auto; 
-
-    }
+  .img,
+  .imgDesktop {
+    height: auto;
   }
-.conteudoSobre{
-    background-color: #B3CAD7;
-    border-radius: .5em;
-    padding-bottom: 2em;
-    
 }
-.linhaSobre, .linhaContato{
-    
+.conteudoSobre {
+  background-color: #12110C;
+  padding-bottom: 2em;
+}
+.linhaSobre{
     text-align: center;
-    
+    display: flex;
 }
-.fotoSobre{
-    padding: 2em;
-    border-radius: 3em;
-    height: 600px;
-    width: auto;
+.linhaContato {
+  text-align: center;
+  display: flex;
+  padding-bottom: 4%;
 }
-.txtSobre{
-    text-align: justify;
-    padding: 5em;
+.fotoSobre {
+  padding: 2em;
+  border-radius: 3em;
+  height: 600px;
+  width: auto;
 }
-.txtSobre p{
-    font-family:  Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+.txtSobre {
+  text-align: justify;
+  padding: 5em;
 }
-.colunaIcons, .colunaCopyRight{
-    padding: 0.5em;
-    text-align: center;
+.txtSobre p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
 }
-.listaLinks{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.colunaIcons,
+.colunaCopyRight {
+  padding: 0.5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.listaLinks li{
-    margin: 10px 0;
-    padding: 0;
+.listaLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-.listaLinks li a{
-    color:  #ffffff ;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
+.listaLinks li {
+  margin: 10px 0;
+  padding: 0; 
+  display: inline-block;
+}
+.listaLinks li a {
+  color: #ffffff;
+  font-family: "M PLUS Code Latin", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 10px;
 }
 .listaLinks li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-.linhaContato h3{
-    padding-top: 4%;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    text-align: center;
-    justify-content: center;
-    color: #ffffff;
+.linhaContato h3 {
+  padding-top: 4%;
+  font-family: "M PLUS Code Latin", sans-serif;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+  padding-bottom: 4%;
 }
-.colunaCopyRight p{
-    color: #ffffff;
-    margin-top: 2em;
+.colunaCopyRight p {
+  color: #ffffff;
+  margin-bottom: 0;
 }
-.listaLinksForm{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.listaLinksForm {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.listaLinksForm li{
-    margin: 5% 0;
-    padding: 0;
+.listaLinksForm li {
+  margin: 5% 0;
+  padding: 0;
 }
-.listaLinksForm li a{
-    color:  #000000 ;
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 1em;
+.listaLinksForm li a {
+  color: #000000;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 1em;
 }
 .listaLinksForm li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-.edit h4, .titleContato{
-    font-family: 'M PLUS Code Latin', sans-serif;
-    text-align: center;
-    justify-content: center;
-    
+.edit h4,
+.titleContato {
+  font-family: "M PLUS Code Latin", sans-serif;
+  text-align: center;
+  justify-content: center;
 }
 
-
-
-
+.fixedButton {
+  position: fixed;
+  bottom: 30px; /* Distância do fundo */
+  right: 30px; /* Distância da esquerda */
+  border: none;
+  cursor: pointer;
+  width: auto;
+  height: 7vh;
+}
+.btnEnviar {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  border-radius: 1em;
+  padding: 1em;
+}
